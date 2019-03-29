@@ -8,6 +8,7 @@ import time
 
 # Set GPIO mode: GPIO.BCM or GPIO.BOARD
 GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
 
 # GPIO pins list based on GPIO.BOARD
 #gpioList1 = [3,5,7,8,10,11,12,13,15]
@@ -24,7 +25,8 @@ while True:
 	# Change gpio pins in list 1 from low to high and list 2 from high to low
 	GPIO.output(gpioList1, 1)
 	GPIO.output(gpioList2, 1)
-	#time.sleep(1)
+	time.sleep(10)
+        print('geethu')
 
 	# Change gpio pin in list 1 from high to low and list 2 from low to high
 	#GPIO.output(gpioList1, 0)
